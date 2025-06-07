@@ -100,9 +100,11 @@ def cavity_analysis(dataframe, Sample_Aeff = None, plot = False, holder_params =
 
     m = p[0]
     b = p[1]
+    #b=0
     
     mi = pi[0]
     bi = pi[1]
+    #bi=0
 
     eps_r = []
     Del_eps_r_list = []
@@ -113,6 +115,7 @@ def cavity_analysis(dataframe, Sample_Aeff = None, plot = False, holder_params =
             ## Accounts for the increased E-field strength in samples
             a0 = dataframe['EperE0'][0] - 1
             a = 1 + (a0)/2
+            #a = dataframe['EperE0'][0]
         except:
             #print("No magnitude correction factor found")
             a = 1
